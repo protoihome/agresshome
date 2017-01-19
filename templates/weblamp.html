@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"> 
+<html> 
+   <head> 
+        <!--  Web Lamp
+          The Vietnamese German University
+          Foundation Year Studies
+          Instructor: Richard G. Bradley, MAL, MSM
+          Sample Project: Web Controlled Galileo light, Version 1.0 -->
+          <title>Web Controlled Lamp Galileo Project</title>  
+   </head>
+
+   <body>
+      <table align="center" border="0" width="100%">
+          <tr>
+              <th width="25%"><img src="{{ url_for('static',filename="vgu.jpg", height="100")}}"></th>
+              <th width="50%"><font size="+1">
+                  Vietnamese-German University<br>
+                  Foundation Year Studies<br></font><br></th>
+              <th width="25%"><img src="{{ url_for('static',filename="vgu.jpg", height="100")}}"></th>
+          </tr>
+      </table>
+   <h1 align="center">Web Controlled Galileo Project, Version 1</h1>
+   <h2 align="center">Device Listing and Status</h2>
+    <p align="center"> {{DateNow}}<br>  
+      Host Name: {{ HostName }} <br>
+      IP Address: {{ IPAddr }} <br>
+    </p>
+
+   {% for pin in pins %}
+   <p align="center"> {{ pins[pin].name }}
+   {% if pins[pin].state == true %}
+      is currently on (<a href="/{{pin}}/off">turn off</a>)
+   {% else %}
+      is currently off (<a href="/{{pin}}/on">turn on</a>)
+   {% endif %}
+   </p>
+   {% endfor %}
+
+   {% if message %}
+   <h3 align="center">{{ message }}</h3>
+   {% endif %}
+
+     <address>
+     <p> Created by Richard G. <u>Bradley</u> MSM, MAL<br>
+         Lecturer, <a href="http://www.vgu.edu.vn">Vietnamese-German University</a><br>
+        <tt>Last modified:12 Dec 2014</tt></p>
+    </address>
+</body>
+</html>

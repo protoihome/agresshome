@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% block cabecalho %}
+    <title>{% block title %}{% endblock %} - AgressHome</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css')}}"/>
+    <script src="/static/lib/jquery.min.js"></script>
+    <!--script src="cordova.js" id="xdkJScordova_"></--script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="/static/js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="/static/xdk/init-dev.js"></script>    <!-- normalizes device and document ready events, see README for details -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/getRouteParameter.js"></script>
+    <script src="/static/js/nav_get_comodos_script.js"></script>
+    <script src="/static/js/comodos_user_script.js"></script>
+    {% endblock %}
+</head>
+<body>
+    <div id="content">{% block corpo %}{% endblock %}</div>
+    <div>{% block footer %}
+        &copy; Copyright 2017
+    {% endblock %}</div>
+</body>
+</html>

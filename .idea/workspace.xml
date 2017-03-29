@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d32aea1f-dde2-4c3c-87c1-10e5ca82c80d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/ssillva.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/info.html" afterPath="$PROJECT_DIR$/templates/info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testeflask.py" afterPath="$PROJECT_DIR$/testeflask.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webFlaskGalileo.py" afterPath="$PROJECT_DIR$/webFlaskGalileo.py" />
     </list>
     <ignored path="webFlaskGalileo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -532,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490820834874</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Classe Banco de dados">
+      <created>1490824793514</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1490824793514</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -576,7 +579,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="organização do projeto" />
     <MESSAGE value="deletando estrutura anterior" />
-    <option name="LAST_COMMIT_MESSAGE" value="deletando estrutura anterior" />
+    <MESSAGE value="Classe Banco de dados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classe Banco de dados" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

@@ -67,9 +67,10 @@ def comodos():
     if request.form == 'POST':
 	    aparelho = request.form['id_ap']
 	    acao = request.form['acao']
-	    print aparelho
 	    print acao
-	return render_template("Ola")#**templateData)
+	    print aparelho
+	    templateData = {'acao':acao, 'aparelho':aparelho}
+	    return render_template('index.html', **templateData)
 '''
 # The function below is executed when someone requests a URL with the pin number and action in it:
 @app.route("/<changePin>/<action>")

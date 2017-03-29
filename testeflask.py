@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask import jsonify
 
 app = Flask(__name__)
@@ -7,7 +7,17 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     templateData = {'sandro':12, 'Judison': 'Godinho'}
-    return render_template('comodos.html', **templateData)
+    return render_template('info.html', **templateData)
+
+@app.route('/comodos',  methods=['POST', 'GET'])
+def comodo():
+
+    if request.method == 'POST':
+        #aparelho = request.form['id_ap']
+        acao = request.form['acao']
+        print acao
+    templateData = {'acao': acao, 'Judison': 'Godinho'}
+    return render_template('testeform.html', **templateData)
 
 @app.route('/codigo')
 def hello_world2():

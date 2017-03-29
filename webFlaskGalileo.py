@@ -27,9 +27,9 @@ app = Flask(__name__)
 
 # Create a dictionary called pins to store the pin number, name, and pin state:
 pins = {
-   13 : {'name' : 'Quarto', 'state' : gpio.LOW},
-   7 : {'name' : 'Sala', 'state' : gpio.LOW},
-   9 : {'name' : 'Cozinha', 'state' : gpio.LOW}
+   13 : {'id' : 'Quarto', 'state' : gpio.LOW},
+   7 : {'id' : 'Sala', 'state' : gpio.LOW},
+   9 : {'id' : 'Cozinha', 'state' : gpio.LOW}
    }
 
 
